@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QuizBlitz - Coding Quiz</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="app" id="app">
+        <div class="logo">🎯 QuizBlitz</div> 
+        <p class="subtitle">Challenge Your Coding Knowledge!</p>
+
+        <section id="home-screen">
+            <h1>Welcome to QuizBlitz!</h1>
+            <p>Learn, Play and Test Your Skills.</p>
+            <input type="text" id="username" placeholder="Enter your name">
+            <button class="primary-btn" onclick="startApp()">Get Started</button>
+            <p id="message" class="message"></p>
+        </section>
+
+        <section id="category-screen" class="hidden">
+            <h2 id="welcome-message">Choose a Category</h2>
+            <p>Select your favorite coding topic.</p>
+
+            <div class="category-grid">
+                <button class="category html" onclick="selectCategory('HTML')">🌐<br>HTML</button>
+                <button class="category css" onclick="selectCategory('CSS')">🎨<br>CSS</button>
+                <button class="category js" onclick="selectCategory('JavaScript')">⚡<br>JavaScript</button>
+                <button class="category java" onclick="selectCategory('Java')">☕<br>Java</button>
+            </div>
+        </section>
+
+        <section id="quiz-screen" class="hidden">
+            <div class="quiz-info">
+                <span id="category-name"></span>
+                <span id="question-count"></span>
+            </div>
+
+            <div class="timer">⏱ Time Left: <span id="time">15</span>s</div>
+            <div class="progress-track">
+                <div id="progress-bar"></div>
+            </div>
+
+            <h2 id="question">Question appears here</h2>
+            <div id="answer-buttons" class="answer-buttons"></div>
+            <p id="feedback" class="feedback"></p>
+
+            <button id="next-btn" class="primary-btn hidden" onclick="nextQuestion()">
+                Next Question →
+            </button>
+        </section>
+
+        <section id="result-screen" class="hidden">
+            <div class="result-icon">🏆</div>
+            <h1>Quiz Completed!</h1>
+            <p id="result-message"></p>
+            <div class="score-card">
+                <p>Your Score</p>
+                <h2 id="score">0 / 5</h2>
+                <p id="percentage">0%</p>
+            </div>
+            <button class="primary-btn" onclick="chooseAgain()">Choose Category</button>
+            <button class="secondary-btn" onclick="playAgain()">Play Again</button>
+        </section>
+    </div>
+
+    <footer>Made with ❤️ by QuizBlitz</footer>
+
+    <script src="script.js"></script>
+</body>
+</html>  
