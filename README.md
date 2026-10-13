@@ -22,7 +22,7 @@ QuizBlitz is an interactive quiz application that helps users test their knowled
 The backend is developed using Java and Spring Boot. It provides quiz questions for all four categories through a REST API. The frontend fetches questions from the deployed backend.
 
 ## Live Demo
-https://mrp2016.github.io/quizbits/
+https://shanmugapriya20062.github.io/QuizBlitz/
 
 ## Backend API
 https://quizblitz-1.onrender.com/api/questions
